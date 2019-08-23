@@ -1,24 +1,21 @@
-# README
+# Be My Bartender - Back-End
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Recreating my MOD 1 Terminal project, [Bartender CLI App](https://github.com/Lexscher/Bartender_CLI_App)
 
-Things you may want to cover:
+API: [The CocktailDB](https://www.thecocktaildb.com/)
 
-* Ruby version
+Models:
 
-* System dependencies
+- Users `(id: BIGSERIAL PK, firstname, lastname, username, email, password_digest)`
 
-* Configuration
+- Cocktails `(id: BIGSERIAL PK, name, alcoholic: boolean)`
 
-* Database creation
+- Favorites `(id: BIGSERIAL PK, user_id: integer FK user.id, coctail_id: integer FK cocktail.id)`
 
-* Database initialization
+- CustomCoctails `(id: BIGSERIAL PK, name, user_id: integer FK )`
 
-* How to run the test suite
+- CocktailIngredients `(id: BIGSERIAL PK, name, alcoholic: boolean)`
 
-* Services (job queues, cache servers, search engines, etc.)
+- CustomIngredients `(id: BIGSERIAL PK, ingredient_id: integer FK ingredient.id, custom_cocktail_id: integer FK custom_cocktail.id)`
 
-* Deployment instructions
-
-* ...
+- ingredients `(id: BIGSERIAL PK, name)`
